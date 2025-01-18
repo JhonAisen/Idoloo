@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <label>
+            <div class="heart" onclick="toggleMessage()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" alt="Heart">
+            </div>
+            <input id="messageState" type="checkbox" style="display:none"/>
+        </label>
+        <div class="message" id="message" style="display: none;">
+            <h1>Hi my idol,</h1>
+            <p>
+                Hiii ayeennn, I just want to express more about how i feel for u right now, I know u're not ready pa i respect that. But I've decided that the risk of silence is far greater then the courage it takes to speak, so here I am opening my heart to u. 
+            </p>
+            <p>
+                From the very first moment that we chat each other. Over the time, these feelings grew into something far more profound. You've become the reason my day feels better and brighter.
+            </p>
+            <p>
+                I admire so much all the things about u. I hope u appreciate this little effort to express more how i feel for u
+            </p>
+            <a href="flower.html" class="proceed-button">Proceed</a>
+        </div>
+    </div>
+    <script>
+    function toggleMessage() {
+        const message = document.getElementById('message');
+        if (message.style.display === 'none' || message.style.display === '') {
+            message.classList.add('show'); // Add the show class
+            message.style.display = 'block'; // Set display to block
+        } else {
+            message.classList.remove('show'); // Remove the show class
+            setTimeout(() => {
+                message.style.display = 'none'; // Hide after fade out
+            }, 500); // Match the duration of the fade effect
+        }
+    }
+    </script>
+</body>
+</html>
